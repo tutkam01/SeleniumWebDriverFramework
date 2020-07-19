@@ -9,4 +9,21 @@
   </parent>
   <artifactId>Tests</artifactId>
   <name>Tests</name>
+  <dependencies>
+  	<dependency>
+  		<groupId>tutka.mateusz</groupId>
+  		<artifactId>Core</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		 <groupId>tutka.mateusz</groupId>
+  		 <artifactId>Pages</artifactId>
+  		 <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  			<groupId>org.testng</groupId>
+  			<artifactId>testng</artifactId>
+  			<version>7.1.0</version>
+	</dependency>
+  </dependencies>
 </project>

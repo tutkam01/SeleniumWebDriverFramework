@@ -2,6 +2,6 @@
 .project
 .classpath
 target
-/test-output
+*/test-output
 *.log
 *.orig
