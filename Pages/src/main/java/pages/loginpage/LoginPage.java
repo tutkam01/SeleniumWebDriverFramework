@@ -1,13 +1,12 @@
-package loginpage;
-
-import homepage.HomePage;
-
+package pages.loginpage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import pagefactory.Page;
+import pages.homepage.HomePage;
+import pages.myaccount.MyAccountPage;
+import pages.pagefactory.Page;
 
 public class LoginPage extends Page {
 	
@@ -37,9 +36,9 @@ public class LoginPage extends Page {
 		return this;
 	}
 	
-	public HomePage clickSubmitLogin(){
+	public MyAccountPage clickSubmitLogin(){
 		submitLoginButton.click();
-		return new HomePage(driver);
+		return new MyAccountPage(driver);
 	}
 	
 	public LoginPage clickSubmitLoginAndFail(){
@@ -47,8 +46,8 @@ public class LoginPage extends Page {
 		return new LoginPage(driver);
 	}
 	
-	public WebElement getAuthenticationFailedBox() {
-		return authenticationFailedBox;
+	public String getAuthenticationFailureMessage() {
+		return authenticationFailedBox.getText().trim();
 	}
 
 }

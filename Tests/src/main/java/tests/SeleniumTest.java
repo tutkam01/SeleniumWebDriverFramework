@@ -7,7 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import drivers.WebDriverHandler;
@@ -19,14 +21,15 @@ import drivers.WebDriverHandler;
 public class SeleniumTest {
    protected WebDriver driver;
    
-   @BeforeTest
+   @BeforeMethod
    protected void setupTest() throws MalformedURLException{
 	   String runDestination = System.getProperty("run", "locally");
 	   
 	   if("locally".equalsIgnoreCase(runDestination)){
 		   WebDriverHandler.loadGeckoDriver();
-		   DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-		   driver = new FirefoxDriver(capabilities);
+//		   DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		   driver = new FirefoxDriver();
+//		   driver = new FirefoxDriver(capabilities);
 	   }else if("grid".equalsIgnoreCase(runDestination)){
 		   DesiredCapabilities capabilty = DesiredCapabilities.firefox();
 		   driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilty);
@@ -37,7 +40,7 @@ public class SeleniumTest {
 	   driver.manage().window().maximize();
    }
    
-   @AfterTest
+   @AfterMethod
    protected void tearDownDriver(){
 		if(driver!=null){
 			driver.quit();
