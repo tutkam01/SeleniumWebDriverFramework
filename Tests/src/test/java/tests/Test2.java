@@ -9,7 +9,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
 
-import drivers.WebDriverHandler;
 import pages.homepage.HomePage;
 
 public class Test2 {

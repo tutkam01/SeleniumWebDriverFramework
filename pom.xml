@@ -88,6 +88,11 @@
         		<artifactId>maven-surefire-plugin</artifactId>
         		<configuration>
           			<threadCount>1</threadCount>
+        		    <suiteXmlFiles>
+        				<suiteXmlFile> 
+							${suiteXmlFile}        				
+        				</suiteXmlFile>
+        			</suiteXmlFiles>
         		</configuration>
         		<dependencies>
           			<dependency>

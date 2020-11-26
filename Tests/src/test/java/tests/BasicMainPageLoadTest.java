@@ -11,6 +11,7 @@ public class BasicMainPageLoadTest extends SeleniumTest {
 	
 	@Test
 	public void shouldNavigateToMainPage() throws MalformedURLException{
+		System.out.println("Thread id = " + Thread.currentThread().getId());
 	  
 	  new HomePage(driver)
 	  	.check(HomePageAssertions.class)
