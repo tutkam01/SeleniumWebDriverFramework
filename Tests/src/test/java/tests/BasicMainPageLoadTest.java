@@ -4,6 +4,7 @@ import java.net.MalformedURLException;
 
 import org.testng.annotations.Test;
 
+import coretest.SeleniumTest;
 import assertions.homePage.HomePageAssertions;
 import pages.homepage.HomePage;
 

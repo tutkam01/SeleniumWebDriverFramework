@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Test;
 
+import coretest.SeleniumTest;
 import assertions.loginPage.LoginPageAssertions;
 import assertions.myaccount.MyAccountPageAssertions;
 import pages.homepage.HomePage;
