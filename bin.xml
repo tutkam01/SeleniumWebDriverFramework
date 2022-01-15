@@ -10,11 +10,10 @@
             <directory>../Tests/target/test-classes</directory>
             <outputDirectory>/</outputDirectory>
         </fileSet>
-     <!--    
         <fileSet>
-            <directory>../Tests/src/main/resources</directory>
+            <directory>../Pages/src/main/resources</directory>
             <outputDirectory>/</outputDirectory>
-        </fileSet> -->
+        </fileSet>
     </fileSets>
     <dependencySets>
         <dependencySet>

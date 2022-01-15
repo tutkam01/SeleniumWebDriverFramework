@@ -32,7 +32,8 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>executor.TestExecutor</mainClass>
+						<!-- 	<mainClass>executor.TestExecutor</mainClass>  -->
+						<mainClass>coretest.TestExecutorMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

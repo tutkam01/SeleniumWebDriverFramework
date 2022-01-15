@@ -4,9 +4,10 @@ import java.net.MalformedURLException;
 
 import org.testng.annotations.Test;
 
-import coretest.SeleniumTest;
 import assertions.homePage.HomePageAssertions;
+import coretest.SeleniumTest;
 import pages.homepage.HomePage;
+
 
 public class BasicMainPageLoadTest extends SeleniumTest {
 	

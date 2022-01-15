@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.TestNG;
@@ -39,7 +40,9 @@ public class SeleniumTest {
 	   if("locally".equalsIgnoreCase(runDestination)){
 		   System.out.println("load gecko");
 		   WebDriverHandler.loadGeckoDriver();
-		   driver = new FirefoxDriver();
+		   FirefoxOptions fireFoxOptions = new FirefoxOptions();
+		   fireFoxOptions.setAcceptInsecureCerts(true);
+		   driver = new FirefoxDriver(fireFoxOptions);
 		   System.out.println("Po inicjalizacji drivera");
 	   }else if("grid".equalsIgnoreCase(runDestination)){
 		   DesiredCapabilities capabilty = DesiredCapabilities.firefox();
